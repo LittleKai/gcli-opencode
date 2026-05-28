@@ -20,19 +20,33 @@ Configured model ids:
 
 ## Global OpenCode Setup
 
-For global use, keep secrets in the user-level OpenCode config:
+For global use, keep secrets in the user-level OpenCode config. The usual location is:
 
 ```text
-C:\Users\XEON\.config\opencode\opencode.jsonc
+Windows: %USERPROFILE%\.config\opencode\opencode.jsonc
+macOS/Linux: $HOME/.config/opencode/opencode.jsonc
 ```
 
-Recommended plugin entry:
+Recommended plugin entry. Use an absolute path to this checkout's plugin file:
 
 ```jsonc
 {
   "plugin": [
     [
-      "D:\\Dev\\2.reference_pj\\harness-ref\\opencode\\.opencode\\plugins\\gcli.ts",
+      "C:\\path\\to\\gcli-opencode\\.opencode\\plugins\\gcli.ts",
+      { "apiKeys": "key1:80,key2:20,key3", "debug": true, "compat": false }
+    ]
+  ]
+}
+```
+
+On macOS/Linux, use the same absolute path style for your checkout, for example:
+
+```jsonc
+{
+  "plugin": [
+    [
+      "/path/to/gcli-opencode/.opencode/plugins/gcli.ts",
       { "apiKeys": "key1:80,key2:20,key3", "debug": true, "compat": false }
     ]
   ]
@@ -94,4 +108,4 @@ Not implemented yet:
 - Per-key cooldown or health state.
 - Live GCLI smoke test against real keys.
 
-See `.claude/LOCAL_GCLI_OVERLAY.md` and `.claude/GCLI_PLUGIN_NOTES.md` for preservation and phase notes.
+Keep any personal agent notes outside commits. This repository ignores `.claude/` and `claude.md` by default.

@@ -7,6 +7,7 @@ node_modules
 .idea
 .vscode
 .codex
+.claude
 *~
 playground
 tmp
@@ -23,6 +24,10 @@ a.out
 target
 .scripts
 .direnv/
+claude.md
+tsgo
+tsgo.exe
+.tsgo/
 
 # Local dev files
 opencode-dev
