@@ -25,9 +25,6 @@ target
 .scripts
 .direnv/
 claude.md
-tsgo
-tsgo.exe
-.tsgo/
 
 # Local dev files
 opencode-dev
